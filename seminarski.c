@@ -217,14 +217,16 @@ void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
         }
 
     }
-    while(IA1[br1]!=-1){
+    while(IA1[br1]!=-1)
+    {
         IA[br]=IA1[br1];
         JA[br]=JA1[br1];
         A[br]=A1[br1];
         br++;
         br1++;
     }
-    while(IA2[br2]!=-1){
+    while(IA2[br2]!=-1)
+    {
         IA[br]=IA2[br2];
         JA[br]=JA2[br2];
         A[br]=A2[br2];
@@ -269,16 +271,16 @@ int main ()
     int matA[m][n],matB[100][100],matC[100][100];
     int proc_min = 40;
     int proc_max = 50;
-    int A[20000],IA[20000],JA[20000];
-    int A1[10000],IA1[10000],JA1[10000];
-    int A2[10000],IA2[10000],JA2[10000];
+    int A[12000],IA[12000],JA[12000];
+    int A1[6000],IA1[6000],JA1[6000];
+    int A2[6000],IA2[6000],JA2[6000];
 
     srand(time(NULL) * getpid() );
 
 
     /*
 
-   for(int i=0; i<10; i++)
+    for(int i=0; i<10; i++)
     {
 
         create(m, n, matA, proc_min, proc_max);
@@ -293,7 +295,7 @@ int main ()
 
 
     /*
-   for(int i=0; i<10; i++)
+    for(int i=0; i<10; i++)
     {
 
         create(m, n, matA, proc_min, proc_max);
@@ -310,7 +312,7 @@ int main ()
 
     /*
 
-   for(int i=0; i<10; i++)
+    for(int i=0; i<10; i++)
     {
 
         create(m, n, matA, proc_min, proc_max);
