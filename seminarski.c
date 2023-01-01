@@ -54,7 +54,6 @@ void promjesaj (int m, int n, int mat[m][n])
 
 }
 
-
 void create(int m, int n, int mat[m][n], int proc_min, int proc_max)
 {
     float proc_nula;
@@ -161,9 +160,6 @@ void product(int m, int n, int p, int A[m][n], int B[n][p], int C[m][p])
         }
     }
 }
-
-
-
 
 void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[], int IA[], int JA[])
 {
@@ -316,7 +312,6 @@ void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
 
 }
 
-
 int main ()
 {
 
@@ -330,47 +325,7 @@ int main ()
     int A1[10000],IA1[10000],JA1[10000];
     int A2[10000],IA2[10000],JA2[10000];
 
-
-//int m, int n, int mat[m][n], int proc_min, int proc_max)
     srand(time(NULL) * getpid() );
-    /*
-
-    for(int i=0; i<10; i++)
-    {
-
-        create(m, n, mat, proc_min, proc_max);
-
-    }
-
-    */
-
-    //create(m, n, matA, proc_min, proc_max);
-    //create(m, n, matB, proc_min, proc_max);
-
-    //create(n, p, matB, proc_min, proc_max);
-//void transformToCSR(int m, int n, int mat[m][n], int A[], int IA[], int JA[])
-  //  transformToCSR(m,n,matA,A1,IA1,JA1);
-  //  transformToCSR(m,n,matB,A2,IA2,JA2);
-
-//void sum(int m, int n, int A[m][n], int B[m][n], int C[m][n])
-    /*
-    sum(m,n,matA,matB,matC);
-    printf("suma matrica A i B je matrica C:\n");
-    print(m,n,matC);
-    */
-//void product(int m, int n, int p, int A[m][n], int B[n][p], int C[m][p])
-    /*
-
-        product(m,n,p,matA,matB,matC);
-        print(m,p,matC);
-
-    */
-
-//void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[], int IA[], int JA[])
-   // sum(m,n,matA,matB,matC);
-    //print(m,n,matC);
-   // summ(A1,IA1,JA1,A2,IA2,JA2,A,IA,JA);
-
 
    /*
 
@@ -386,7 +341,6 @@ int main ()
     }
 
    */
-
 
    /*
 
@@ -404,6 +358,8 @@ int main ()
 
    */
 
+   /*
+
    for(int i=0; i<1; i++)
     {
 
@@ -416,7 +372,7 @@ int main ()
     }
 
 
-
+   */
 
     return 0;
 }
