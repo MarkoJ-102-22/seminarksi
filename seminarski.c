@@ -264,7 +264,7 @@ int main ()
 {
 
     int m=100;
-    int n=10;
+    int n=100;
     int p=100;
     int matA[m][n],matB[100][100],matC[100][100];
     int proc_min = 40;
