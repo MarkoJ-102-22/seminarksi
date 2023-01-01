@@ -233,58 +233,6 @@ void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
     }
 
 
-/*
-    // printf("duzina ia %ld\n",sizeof(IA1));
-    int r1,c1,r2,c2,m,n,i,j,k;
-
-    // r1=duz1;
-    //r2=duz2;
-    //c1=duz3;
-    //c2=duz4;
-
-
-    //IA[0]=IA1[0];
-    // JA[0]=JA1[0];
-    m=0;
-    n=0;
-    k=0;
-    for(i=0; i<6000; i++)
-    {
-        for(j=0; j<6000; j++)
-        {
-            if(IA1[m]==i && JA1[m]==j &&  IA2[n]==i && JA2[n]==j)
-            {
-
-                A[k]=A1[m]+A2[n];
-                IA[k]=IA1[m];
-                JA[k]=JA1[m];
-                m++;
-                k++;
-                n++;
-            }
-
-            else if(IA1[m]==i && JA1[m]==j)
-            {
-                IA[k]=IA1[m];
-                JA[k]=JA1[m];
-                A[k]=A1[m];
-                m++;
-                k++;
-            }
-            else if(IA2[n]==i && JA2[n]==j)
-            {
-                IA[k]=IA1[n];
-                JA[k]=JA1[n];
-                A[k]=A1[n];
-                n++;
-                k++;
-            }
-
-        }
-    }
-    */
-
-
     printf("\n");
     //printf("IA:\n");
     for(int i=0; i<br ; i++)
@@ -315,7 +263,7 @@ void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
 int main ()
 {
 
-    int m=10;
+    int m=100;
     int n=10;
     int p=100;
     int matA[m][n],matB[100][100],matC[100][100];
@@ -327,7 +275,8 @@ int main ()
 
     srand(time(NULL) * getpid() );
 
-   /*
+
+    /*
 
    for(int i=0; i<10; i++)
     {
@@ -340,11 +289,11 @@ int main ()
         print(m,n,matC);
     }
 
-   */
+    */
 
-   /*
 
-   for(int i=0; i<1; i++)
+    /*
+   for(int i=0; i<10; i++)
     {
 
         create(m, n, matA, proc_min, proc_max);
@@ -356,11 +305,12 @@ int main ()
         summ(A1,IA1,JA1,A2,IA2,JA2,A,IA,JA);
     }
 
-   */
+    */
 
-   /*
 
-   for(int i=0; i<1; i++)
+    /*
+
+   for(int i=0; i<10; i++)
     {
 
         create(m, n, matA, proc_min, proc_max);
@@ -371,8 +321,8 @@ int main ()
         print(m,p,matC);
     }
 
+    */
 
-   */
 
     return 0;
 }
