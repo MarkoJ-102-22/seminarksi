@@ -138,6 +138,19 @@ void sum(int m, int n, int A[m][n], int B[m][n], int C[m][n])
 
 }
 
+void raz(int m, int n, int A[m][n], int B[m][n], int C[m][n])
+{
+
+    for (int i = 0; i < m; ++i)
+    {
+        for (int j = 0; j < n; ++j)
+        {
+            C[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+}
+
 void product(int m, int n, int p, int A[m][n], int B[n][p], int C[m][p])
 {
 
@@ -262,6 +275,108 @@ void summ(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
 
 }
 
+void razz(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[], int IA[], int JA[])
+{
+    int br=0;
+    int br1=0;
+    int br2=0;
+
+    while(IA1[br1]!=-1 && IA2[br2]!=-1)
+    {
+
+        if(IA1[br1]<IA2[br2])
+        {
+            IA[br]=IA1[br1];
+            JA[br]=JA1[br1];
+            A[br]=A1[br1];
+            br++;
+            br1++;
+        }
+        else if(IA1[br1]==IA2[br2])
+        {
+            if(JA1[br1]<JA2[br2])
+            {
+                IA[br]=IA1[br1];
+                JA[br]=JA1[br1];
+                A[br]=A1[br1];
+                br++;
+                br1++;
+            }
+            else if (JA1[br1]==JA2[br2])
+            {
+                IA[br]=IA1[br1];
+                JA[br]=JA1[br1];
+                A[br]=A1[br1]-A2[br2];
+                br++;
+                br1++;
+                br2++;
+            }
+            else
+            {
+                IA[br]=IA2[br2];
+                JA[br]=JA2[br2];
+                A[br]=A2[br2];
+                br++;
+                br2++;
+            }
+
+        }
+        else
+        {
+            IA[br]=IA2[br2];
+            JA[br]=JA2[br2];
+            A[br]=A2[br2];
+            br++;
+            br2++;
+        }
+
+    }
+    while(IA1[br1]!=-1)
+    {
+        IA[br]=IA1[br1];
+        JA[br]=JA1[br1];
+        A[br]=A1[br1];
+        br++;
+        br1++;
+    }
+    while(IA2[br2]!=-1)
+    {
+        IA[br]=IA2[br2];
+        JA[br]=JA2[br2];
+        A[br]=A2[br2];
+        br++;
+        br2++;
+    }
+
+
+    printf("\n");
+    //printf("IA:\n");
+    for(int i=0; i<br ; i++)
+    {
+        printf("%d ", IA[i]);
+
+    }
+    printf("\n");
+    //printf("JA:\n");
+    for(int i=0; i<br ; i++)
+    {
+        printf("%d ", JA[i]);
+
+    }
+
+    printf("\n");
+    for(int i=0; i<br ; i++)
+    {
+        printf("%d ", A[i]);
+
+    }
+    printf("\n");
+
+
+
+}
+
+
 int main ()
 {
 
@@ -278,7 +393,7 @@ int main ()
     srand(time(NULL) * getpid() );
 
 
-    /*
+
 
     for(int i=0; i<10; i++)
     {
@@ -288,6 +403,20 @@ int main ()
         create(m, n, matB, proc_min, proc_max);
         print(m,n,matB);
         sum(m,n,matA,matB,matC);
+        print(m,n,matC);
+    }
+
+
+        /*
+
+    for(int i=0; i<10; i++)
+    {
+
+        create(m, n, matA, proc_min, proc_max);
+        print(m,n,matA);
+        create(m, n, matB, proc_min, proc_max);
+        print(m,n,matB);
+        raz(m,n,matA,matB,matC);
         print(m,n,matC);
     }
 
@@ -305,6 +434,21 @@ int main ()
         transformToCSR(m,n,matA,A1,IA1,JA1);
         transformToCSR(m,n,matB,A2,IA2,JA2);
         summ(A1,IA1,JA1,A2,IA2,JA2,A,IA,JA);
+    }
+
+    */
+
+ /*
+    for(int i=0; i<10; i++)
+    {
+
+        create(m, n, matA, proc_min, proc_max);
+        print(m,n,matA);
+        create(m, n, matB, proc_min, proc_max);
+        print(m,n,matB);
+        transformToCSR(m,n,matA,A1,IA1,JA1);
+        transformToCSR(m,n,matB,A2,IA2,JA2);
+        razz(A1,IA1,JA1,A2,IA2,JA2,A,IA,JA);
     }
 
     */
