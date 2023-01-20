@@ -97,7 +97,7 @@ void transformToCSR(int m, int n, int mat[m][n], int A[], int IA[], int JA[])
     {
         for (int j=0; j<n; j++)
         {
-            if (mat[i][j]==1)
+            if (mat[i][j]==1 )
             {
                 A[br_A]=mat[i][j];
                 IA[br_A]=i;
@@ -315,7 +315,7 @@ void razz(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
             {
                 IA[br]=IA2[br2];
                 JA[br]=JA2[br2];
-                A[br]=A2[br2];
+                A[br]=-A2[br2];
                 br++;
                 br2++;
             }
@@ -349,25 +349,29 @@ void razz(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
     }
 
 
+
     printf("\n");
     //printf("IA:\n");
     for(int i=0; i<br ; i++)
     {
-        printf("%d ", IA[i]);
+        if(A[i]==1 || A[i]==-1)
+        printf("%d    ", IA[i]);
 
     }
     printf("\n");
     //printf("JA:\n");
     for(int i=0; i<br ; i++)
     {
-        printf("%d ", JA[i]);
+        if(A[i]==1 || A[i]==-1)
+        printf("%d    ", JA[i]);
 
     }
 
     printf("\n");
     for(int i=0; i<br ; i++)
     {
-        printf("%d ", A[i]);
+        if(A[i]==1 || A[i]==-1)
+        printf("%d    ", A[i]);
 
     }
     printf("\n");
@@ -380,8 +384,8 @@ void razz(int A1[], int IA1[], int JA1[],int A2[], int IA2[], int JA2[],int A[],
 int main ()
 {
 
-    int m=100;
-    int n=100;
+    int m=10;
+    int n=10;
     int p=100;
     int matA[m][n],matB[100][100],matC[100][100];
     int proc_min = 40;
@@ -395,6 +399,7 @@ int main ()
 
 
 
+    /*
     for(int i=0; i<10; i++)
     {
 
@@ -405,6 +410,7 @@ int main ()
         sum(m,n,matA,matB,matC);
         print(m,n,matC);
     }
+    */
 
 
         /*
@@ -438,7 +444,8 @@ int main ()
 
     */
 
- /*
+
+   /*
     for(int i=0; i<10; i++)
     {
 
@@ -451,7 +458,8 @@ int main ()
         razz(A1,IA1,JA1,A2,IA2,JA2,A,IA,JA);
     }
 
-    */
+
+   */
 
 
     /*
